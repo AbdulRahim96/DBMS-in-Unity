@@ -1,0 +1,4 @@
+Monobehaviour is a class which is imported by UnityEngine library.
+it consists of predefined Data types and methods
+Data types examples - GameObject, Transform, etc
+Method Examples - Start(), FixedUpdate, OnTriggers(), etc
