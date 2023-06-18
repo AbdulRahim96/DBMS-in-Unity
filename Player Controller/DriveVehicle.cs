@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System;
 
+// NOTE.............. Go to line number 76 and 113 for inserting record in database
+
 public enum PlayerCarStatus { Idle = 0, OpenDoor = 1, inCar = 2, RollDoor = 3, Sit = 4, OutCar = 5, CloseDoor = 6 };
 public enum PlayerBikeStatus { Idle = 0, GettingOn = 1, Sit = 2, GettingOff = 3};
 
@@ -73,7 +75,7 @@ public class DriveVehicle : MonoBehaviour
 
                     if(!carComponents.hasStolen)
                     {
-                        if (Player.CNIC != 0)
+                        if (Player.CNIC != 0) // if the user is registered in database while stealing
                         {
                             // stealing car panalty
                             carComponents.hasStolen = true;
@@ -89,7 +91,7 @@ public class DriveVehicle : MonoBehaviour
                             SQLConnect.InsertRecord(form);
                         }
                         else
-                            Player.UpdateUserMoney(Player.wallet);
+                            Player.UpdateUserMoney(Player.wallet); // if not registered, then all money will be lost and sent to jail
                     }
                 }
 
