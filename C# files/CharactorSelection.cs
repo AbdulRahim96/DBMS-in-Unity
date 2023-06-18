@@ -73,11 +73,6 @@ public class CharactorSelection : MonoBehaviour
         messageText.color = Color.white;
     }
 
-    void validityCheck()
-    {
-       // bool check = username.text.Length.
-    }
-
     public void selectionNext()
     {
         if (AvatarIndex != Avatars.Length - 1)
